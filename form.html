@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #440062;">
     <div style="
-        width: 400px;
+        width: 350px;
         margin: 0 auto;
         padding: 20px;
     ">
@@ -24,8 +24,8 @@
     text-align: center;
     margin: 0 auto;">
         <div class="">
-            <label for="responsavel">QUEM ATENDEU:</label>
-            <select id="responsavel" name="responsavel">
+            <label for="responsavel">Atendido por: </label>
+            <select style="border-radius: 2px; background: none;  color:#FFCE05; border-color: #FFCE05; margin-left: 10px;" id="responsavel" name="responsavel">
                 <option value="Carol">Carol</option>
                 <option value="Thales">Thales</option>
                 <option value="Vitor">Vitor</option>
@@ -35,41 +35,41 @@
         </div>    
         <div>
             <div style="text-align: start;">
-                <label>NOME:</label>
+                <label>Nome:</label>
             </div>
-            <div style="margin: 0 auto;">
-                <input style="width: 100%; height: 30px; margin-bottom: 10px;" name="nome" id="nome"  />
+            <div style="margin: 0 auto; border-radius: 15px; ">
+                <input style="width: 100%; height: 30px; margin-bottom: 10px; border-radius: 5px;" name="nome" id="nome"  />
             </div>
         </div>
         <div class="">
             <div style="text-align: start;">
-                <label>TELEFONE:</label>
+                <label>Telefone:</label>
             </div>
             <div>
-                <input style="width: 100%; height: 30px; margin-bottom: 10px;" title="Por favor, insira apenas números e sem espaço" type="text" inputmode="numeric" pattern="[0-9]*" name="telefone" id="telefone" />
+                <input style="width: 100%; height: 30px; margin-bottom: 10px; border-radius: 5px;" title="Por favor, insira apenas números e sem espaço" type="text" inputmode="numeric" pattern="[0-9]*" name="telefone" id="telefone" />
             </div>
         </div>
         <div class="">
             <div style="text-align: start;">
-                <label>E-MAIL:</label>
+                <label>E-mail:</label>
             </div>
             <div>
-                <input style="width: 100%; height: 30px; margin-bottom: 10px;" type="email" name="email" id="email"/>
+                <input style="width: 100%; height: 30px; margin-bottom: 10px; border-radius: 5px;" type="email" name="email" id="email"/>
             </div>
         </div>
         <div class="">
             <div style="text-align: start;">
-                <label>EMPRESA:</label>
+                <label>Empresa:</label>
             </div>
             <div>
-                <input style="width: 100%; height: 30px;margin-bottom: 20px;" name="empresa" id="empresa"/>
+                <input style="width: 100%; height: 30px;margin-bottom: 20px; border-radius: 5px;" name="empresa" id="empresa"/>
             </div>
         </div>
         <div class="">
-            <div style="text-align: start;">
+            <div style="text-align: start; border-radius: 5px;">
                 <label for="notas">Notas:</label>
             </div>
-            <textarea id="notas" name="notas" rows="4" cols="50"></textarea><br>
+            <textarea style="width: 100%;" id="notas" name="notas" rows="4" cols="50"></textarea><br>
         </div>
 
         <div style="text-align: start;"> 
@@ -81,15 +81,37 @@
         </div>
         <button style="margin-top: 15px;
                     font-family: 'Poppins', Sans-serif;
-                    font-weight: 500;
+                    font-weight: 700;
                     text-transform: uppercase;
-                    background-color: transparent;
-                    background-image: linear-gradient(180deg, #FFD800 0%, #B28704 100%);
-                    color: white;
+                    background-color: #FFCE05 ;
+                    color: #440062;
                     border: none;
+                    border-radius: 2px;
+                    width: 150px;
+                    height: 30px;
                 "
-                type="submit" class="" id="botao_envio">Enviar</button>
+                type="submit" class="" id="botao_envio" onclick="teste()" >Enviar</button>
         </form> 
     </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+                document.getElementById("botao_envio").style.display = "none"; //apaga o botão
+                var novo_elemento = document.createElement("button");    // cria novo botão
+                novo_elemento.style.backgroundColor =  "#828282";
+                novo_elemento.style.color =  "white";
+                novo_elemento.style.border = "white";
+                novo_elemento.style.margin = "15px 0px 0px 0px";
+                novo_elemento.style.width = "150px";
+                novo_elemento.textContent = "Enviar";
+                novo_elemento.style.height = "30px";
+                novo_elemento.style.borderRadius = "2px";
+                novo_elemento.disabled = true;
+                var elemento_pai = document.getElementById("myForm");  //seleciona div
+                elemento_pai.appendChild(novo_elemento);      // adiciona elemento na DIV
+            this.submit();
+        });
+    </script>
 </body>
 </html>
