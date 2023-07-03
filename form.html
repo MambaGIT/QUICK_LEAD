@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #440062;">
+    <div style="
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+    ">
+        <form action="https://mambadigital.com.br/processando_quick.php" method="post"
+    id="myForm"
+
+    style="
+    font-family: 'Poppins', Sans-serif;
+    color:#FFCE05;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;">
+        <div class="">
+            <label for="responsavel">QUEM ATENDEU:</label>
+            <select id="responsavel" name="responsavel">
+                <option value="Carol">Carol</option>
+                <option value="Thales">Thales</option>
+                <option value="Vitor">Vitor</option>
+                <option value="kaua">Kauã</option>
+                <option value="Ribs">Ribs</option>
+            </select>
+        </div>    
+        <div>
+            <div style="text-align: start;">
+                <label>NOME:</label>
+            </div>
+            <div style="margin: 0 auto;">
+                <input style="width: 100%; height: 30px; margin-bottom: 10px;" name="nome" id="nome"  />
+            </div>
+        </div>
+        <div class="">
+            <div style="text-align: start;">
+                <label>TELEFONE:</label>
+            </div>
+            <div>
+                <input style="width: 100%; height: 30px; margin-bottom: 10px;" title="Por favor, insira apenas números e sem espaço" type="text" inputmode="numeric" pattern="[0-9]*" name="telefone" id="telefone" />
+            </div>
+        </div>
+        <div class="">
+            <div style="text-align: start;">
+                <label>E-MAIL:</label>
+            </div>
+            <div>
+                <input style="width: 100%; height: 30px; margin-bottom: 10px;" type="email" name="email" id="email"/>
+            </div>
+        </div>
+        <div class="">
+            <div style="text-align: start;">
+                <label>EMPRESA:</label>
+            </div>
+            <div>
+                <input style="width: 100%; height: 30px;margin-bottom: 20px;" name="empresa" id="empresa"/>
+            </div>
+        </div>
+        <div class="">
+            <div style="text-align: start;">
+                <label for="notas">Notas:</label>
+            </div>
+            <textarea id="notas" name="notas" rows="4" cols="50"></textarea><br>
+        </div>
+
+        <div style="text-align: start;"> 
+            <label>É Potencial?</label>
+            <input style="margin-left: 15px;" type="radio" id="opcao_1" name="potencial" value="sim" required>
+            <label style="font-size: 18px;" for="sim">Sim</label>
+            <input style="margin-left: 15px;" type="radio" id="opcao_2" name="potencial" value="não" required>
+            <label style="font-size: 18px;" for="nao">Não</label><br>
+        </div>
+        <button style="margin-top: 15px;
+                    font-family: 'Poppins', Sans-serif;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    background-image: linear-gradient(180deg, #FFD800 0%, #B28704 100%);
+                    color: white;
+                    border: none;
+                "
+                type="submit" class="" id="botao_envio">Enviar</button>
+        </form> 
+    </div>
+</body>
+</html>
